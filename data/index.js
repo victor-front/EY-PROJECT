@@ -1,17 +1,12 @@
-let conta = true;
+let conta = false;
+let janela = document.getElementById('ey-window');
 
 function boot(){
-	document.getElementById('ey-window').innerHTML = `
-			<div style="display: flex; margin-top: 20px;">
-				<p style="font-size: 1.8em; color: #ddd; margin-left: 1em;">Iniciando</p>
-				<p style="font-size: 1.8em; color: #ddd; animation: piscar 1s linear infinite">_</p>
-			</div>
-			<style>@keyframes piscar{0%{opacity: 0%;}50%{opacity: 100%;}100%{opacity: 0%;}}</style>
-		`;
+	janela.innerHTML = iniciando('Iniciando');
 	setTimeout(()=>{
-		document.getElementById('ey-window').innerHTML = '';
+		janela.innerHTML = '';
 		if(conta){
-			login();
+			signup();
 		}else{
 			make();
 		}
@@ -19,9 +14,13 @@ function boot(){
 }
 
 function make(){
-	window.alert('Vamos criar a sua conta!');
+	janela.innerHTML = criarConta();
 }
 
-function login(){
-	window.alert('Seja bem-vindo(a)!');
+function signup(){
+	window.alert('beta');
+}
+
+function filtrarECriar(){
+	window.alert('beta');
 }
