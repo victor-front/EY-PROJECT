@@ -4,6 +4,16 @@
 	box-sizing: border-box;
 }
 
+.dark{
+	color: #ddd;
+	background-color: #111;
+}
+
+.light{
+	color: #222;
+	background-color: #ddd;
+}
+
 body, html{
 	position: relative;
 	display: flex;
@@ -20,11 +30,57 @@ body{
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	background-color: #111;
 	width: 100%;
 	max-width: 800px;
 	height: 100%;
 	max-height: 450px;
 	margin: 4em auto;
 	overflow: hidden;
+}
+
+section#criarConta{
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+section#criarConta h1{
+	font-size: 1.8em;
+	margin-bottom: 10px;
+}
+
+section#criarConta p{
+	margin-bottom: 10px;
+}
+
+section#criarConta input[type="text"], section#criarConta input[type="password"]{
+	padding: 5px;
+	font-size: .8em;
+	margin-bottom: 10px;
+	border: none;
+	background-color: #eee;
+}
+
+section#criarConta input[type="text"]:focus, section#criarConta input[type="password"]:focus{
+	outline: 1px solid #eee;
+	border: 1px solid #222;
+	color: #222;
+}
+
+section#criarConta input[type="checkbox"]{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+section#criarConta a{
+	color: #844;
+}
+
+section#criarConta input[type="button"]{
+	background-color: #eee;
+	border: none;
+	border-radius: 1px;
+	max-width: 50px;
+	font-weight: bold;
+	padding: 5px;
 }
