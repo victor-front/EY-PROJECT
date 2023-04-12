@@ -19,6 +19,6 @@ const criarConta = () => `
 			<label for="light" onclick="setarCor()"><input id="light" type="radio" name="radtem">Light</label><br>
 			<input id="concordo" type="checkbox" name="concordo"><label for="concordo">Concordo com os termos de privacidade(<a href="#" rel="next" target="_blank">Ler os termos</a>)</label>
 		</div>
-		<input type="button" value="Feito" onclick="filtrarECriar()">
+		<input type="button" value="Feito" onclick="filtrar()">
 	</section>
 `;
