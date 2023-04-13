@@ -1,6 +1,6 @@
-let conta = false; //Define se a conta foi criada ou não
+let conta = localStorage.getItem('eynick'); //Define se a conta foi criada ou não
 let janela = document.getElementById('ey-window'); //Janela recebe o valor do caminho do elemento da tela do EY
-let tema = 'dark';
+let tema = localStorage.getItem('eytema');
 let underfinedTema = 'dark';
 
 function boot(){//Boot do sistema, o sistema se inicia principalmente por aqui

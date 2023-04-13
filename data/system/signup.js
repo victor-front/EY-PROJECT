@@ -15,10 +15,10 @@ function filtrar(){//Filtrar ao criar a conta
 		if(pass.length < 8){//Se a senha for menor que 8...
 			window.alert('Se prefere definir uma senha, é melhor que contenha 8 caracteres.');
 		}else{//Se não...
-			criar();
+			criar(nick, pass);
 		}
 	}else{//Se não...
-		criar();
+		criar(nick);
 	}
 }
 
@@ -27,17 +27,23 @@ function setarCor(){
 		if(document.getElementById('dark').checked){//Se a checkbox dark estiver checada...
 			janela.classList.add('dark');
 			janela.classList.remove('light');
+			localStorage.setItem('eytema', 'dark');
 		}else{//Se não...
 			janela.classList.add('light');
 			janela.classList.remove('dark');
+			localStorage.setItem('eytema', 'light');
 		}
 	}, 100);
 }
 
-function criar(){
-	window.alert('Tudo ok!');
+function criar(nick, pass = null){//Criar a conta em sí
+	localStorage.setItem('eynick', nick);
+	localStorage.setItem('eypassword', pass);
+	location.reload();
 }
 
 function start(){//Startar o sistema
-	//nada
+	console.log(localStorage.getItem('eynick'));
+	console.log(localStorage.getItem('eypassword'));
+	console.log(localStorage.getItem('eytema'));
 }
