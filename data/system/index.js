@@ -19,3 +19,12 @@ function boot(){//Boot do sistema, o sistema se inicia principalmente por aqui
 		}
 	}, 5 * 1000)
 }
+
+function start(){//Startar o sistema
+	setTimeout(()=>{
+		janela.innerHTML = loadLogo();
+		if(localStorage.getItem('eytema') == 'light'){
+			document.getElementById('logo').classList.add('invertColor');
+		}
+	}, 1 * 1000);
+}

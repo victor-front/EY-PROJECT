@@ -22,3 +22,7 @@ const criarConta = () => `
 		<input type="button" value="Feito" onclick="filtrar()">
 	</section>
 `;
+
+const loadLogo = () => `
+	<img id="logo" class="aparecer" src="data/system/logo.png"/>
+`;

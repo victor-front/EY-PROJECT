@@ -41,9 +41,3 @@ function criar(nick, pass = null){//Criar a conta em sí
 	localStorage.setItem('eypassword', pass);
 	location.reload();
 }
-
-function start(){//Startar o sistema
-	console.log(localStorage.getItem('eynick'));
-	console.log(localStorage.getItem('eypassword'));
-	console.log(localStorage.getItem('eytema'));
-}
