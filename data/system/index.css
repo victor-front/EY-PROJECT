@@ -20,7 +20,12 @@
 
 .aparecer{
 	opacity: 100%;
-	animation: aparecer 2s linear;
+	animation: aparecer 5s linear;
+}
+
+.desaparecer{
+	opacity: 0%;
+	animation: desaparecer 4s linear;
 }
 
 #logo{
@@ -105,4 +110,9 @@ section#criarConta input[type="button"]{
 @keyframes aparecer{
 	0%{opacity: 0;}
 	100%{opacity: 100%;}
+}
+
+@keyframes desaparecer{
+	0%{opacity: 100%;}
+	100%{opacity: 0%;}
 }

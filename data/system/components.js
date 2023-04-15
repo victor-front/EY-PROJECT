@@ -9,7 +9,7 @@ const iniciando = (msg) => `
 const criarConta = () => `
 	<section id="criarConta">
 		<div id="apresentacao">
-			<h1>Bem-vindo(a) ao EY 1.0!</h1>
+			<h1>Bem-vindo(a) ao EyeOS!</h1>
 			<p>Bem, é de se notar que não tens uma conta. Vamor começar?</p>
 		</div>
 		<div id="form">
@@ -25,4 +25,20 @@ const criarConta = () => `
 
 const loadLogo = () => `
 	<img id="logo" class="aparecer" src="data/system/logo.png"/>
+`;
+
+const bloMsg = (nick) => `
+	<section id="bloque">
+		<p>Detectamos um usurário chamado <strong>${nick}</strong>. Que fazes?</p>
+		<input type="button" class="buttonGeneric" value="Prosseguir" onclick="bloque02()">
+		<input type="button" class="buttonGeneric" value="Formatar" onclick="perguntar()">
+	</section>
+`
+
+const pergunta = (message, op1, op2, fu1, fu2) => `
+	<section id="pergunta">
+		<p>${message}</p>
+		<input type="button" class="buttonGeneric" value="${op1}" onclick="${fu1}">
+		<input type="button" class="buttonGeneric" value="${op2}" onclick="${fu2}">
+	</section>
 `;

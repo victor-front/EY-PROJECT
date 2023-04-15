@@ -11,20 +11,26 @@ function boot(){//Boot do sistema, o sistema se inicia principalmente por aqui
 	}
 	janela.innerHTML = iniciando('Iniciando');
 	setTimeout(()=>{//Delay de 5 segundos
-		janela.innerHTML = '';
 		if(!conta){
 			signup();//Chamar etapa de criar conta
 		}else{
 			start();//Startar o sistema
 		}
-	}, 5 * 1000)
+	}, 5 * 1000);
 }
 
 function start(){//Startar o sistema
 	setTimeout(()=>{
-		janela.innerHTML = loadLogo();
-		if(localStorage.getItem('eytema') == 'light'){
+		janela.innerHTML = loadLogo();//Desenhar a logo na tela
+		if(localStorage.getItem('eytema') == 'light'){//Se o tema for light, inverter a cor da logo
 			document.getElementById('logo').classList.add('invertColor');
 		}
-	}, 1 * 1000);
+		setTimeout(()=>{//Adicionar anmação de desaparecer
+			document.getElementById('logo').classList.remove('aparecer');
+			document.getElementById('logo').classList.add('desaparecer');
+			setTimeout(()=>{//Remover a logo
+				bloque01();
+			}, 4 * 1000);
+		}, 8 * 1000);
+	}, 2 * 1000);
 }
