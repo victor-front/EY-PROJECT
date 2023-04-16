@@ -107,6 +107,29 @@ section#criarConta input[type="button"]{
 	padding: 5px;
 }
 
+section#bloque, section#pergunta, section#pedirSenha{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+}
+
+section#bloque p, section#pergunta p, section#pedirSenha p{
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+.buttonGeneric{
+	background-color: #eee;
+	border: none;
+	border-radius: 1px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	padding: 5px;
+}
+
 @keyframes aparecer{
 	0%{opacity: 0;}
 	100%{opacity: 100%;}

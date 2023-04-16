@@ -11,7 +11,19 @@ function bloque02(){
 }
 
 function pedirSenha(){
-	window.alert('pedir senha');
+	janela.innerHTML = input(`${localStorage.getItem('eynick')}`, 'Senha', 'enviarPass()');
+	document.getElementById('pedirSenha').innerHTML += botao('Voltar', "janela.innerHTML = bloMsg(localStorage.getItem('eynick'))");
+}
+
+function enviarPass(){
+	let senha = document.getElementById('password').value;
+	if(!senha){
+		window.alert('Por favor, digite algo!')
+	}else if(senha == localStorage.getItem('eypassword')){
+		window.alert('Senha correta!');
+	}else{
+		window.alert('Senha incorreta...');
+	}
 }
 
 function logar(){
@@ -26,7 +38,7 @@ function formatar(){//Função que formata os dados do usuário
 }
 
 function perguntar(){//Perguntar se tens certeza que quer formatar
-	janela.innerHTML = pergunta('Tem certeza? Todos seus dados serão resetados.', 
+	janela.innerHTML = pergunta('Tem certeza? Todos os seus dados serão resetados.', 
 	'Sim', 
 	'Não', 
 	'formatar()', 
