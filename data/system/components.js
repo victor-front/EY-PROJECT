@@ -46,9 +46,17 @@ const pergunta = (message, op1, op2, fu1, fu2) => `
 const input = (title, place, click) => `
 	<section id="pedirSenha">
 		<h1>${title}</h1>
-		<input type="password" id="password" placeholder="${place}">
-		<input type="button" id="enviarPass" class="buttonGeneric" value="Enviar" onclick="${click}">
+		<div>
+			<input type="password" class="password" id="password" placeholder="${place}">
+		</div>
+		<div id="buttons">
+			<input type="button" id="enviarPass" class="buttonGeneric" value="Enviar" onclick="${click}">
+		<div>
 	</section>
+`
+
+const bemVindoa = () => `
+	<h1 id="bemVindoa" class="aparecer">Bem-vindo(a)!</h1>
 `
 
 const botao = (msg, fun) => `

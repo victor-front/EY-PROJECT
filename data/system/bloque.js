@@ -6,16 +6,16 @@ function bloque02(){
 	if(localStorage.getItem('eypassword') !== 'null'){//Se o usuário tiver senha, pedir a senha antes de iniciar
 		pedirSenha();
 	}else{//Se não, logar direto
-		logar();
+		logar();//Chamar a função de logar
 	}
 }
 
-function pedirSenha(){
+function pedirSenha(){//Sistema que chama o menu de pedir a senha
 	janela.innerHTML = input(`${localStorage.getItem('eynick')}`, 'Senha', 'enviarPass()');
-	document.getElementById('pedirSenha').innerHTML += botao('Voltar', "janela.innerHTML = bloMsg(localStorage.getItem('eynick'))");
+	document.getElementById('buttons').innerHTML += botao('Voltar', "janela.innerHTML = bloMsg(localStorage.getItem('eynick'))");
 }
 
-function enviarPass(){
+function enviarPass(){//Sistema que avalia, compara se a senha está correta ou não
 	let senha = document.getElementById('password').value;
 	if(!senha){
 		window.alert('Por favor, digite algo!')
@@ -26,8 +26,18 @@ function enviarPass(){
 	}
 }
 
-function logar(){
-	window.alert('logar');
+function logar(){//Logar na conta do usuário
+	janela.innerHTML =  '';//Limpar a tela
+	setTimeout(()=>{
+		janela.innerHTML = bemVindoa();//Adicionar o elemento bem-vindo já com a animação aparecendo aos poucos
+		setTimeout(()=>{
+			document.getElementById('bemVindoa').classList.remove('aparecer');//Removendo a animação de aparecer e adicionando a de desaparecer
+			document.getElementById('bemVindoa').classList.add('desaparecer');
+			setTimeout(()=>{
+				desktop();//Chamar o desktop
+			}, 5 * 1000)
+		}, 6 * 1000);
+	}, 2 * 1000)
 }
 
 function formatar(){//Função que formata os dados do usuário

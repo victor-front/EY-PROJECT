@@ -84,6 +84,7 @@ section#criarConta input[type="text"], section#criarConta input[type="password"]
 }
 
 section#criarConta input[type="text"]:focus, section#criarConta input[type="password"]:focus{
+	padding: 3.8px;
 	outline: 1px solid #eee;
 	border: 1px solid #222;
 	color: #222;
@@ -128,6 +129,43 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 	margin-bottom: 10px;
 	font-weight: bold;
 	padding: 5px;
+}
+
+.buttonGeneric:hover{
+	opacity: 80%;
+}
+
+#pedirSenha h1{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#pedirSenha #buttons{
+	display: flex;
+	flex-direction: column;
+}
+
+#bemVindoa{
+	position: absolute;
+	font-size: 2em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.password{
+	padding: 5px;
+	font-size: .8em;
+	margin-bottom: 10px;
+	border: none;
+	background-color: #eee;
+}
+
+.password:focus{
+	padding: 3.8px;
+	outline: 1px solid #eee;
+	border: 1px solid #222;
+	color: #222;
 }
 
 @keyframes aparecer{
