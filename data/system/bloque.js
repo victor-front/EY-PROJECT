@@ -12,22 +12,22 @@ function bloque02(){
 
 function pedirSenha(){//Sistema que chama o menu de pedir a senha
 	janela.innerHTML = input(`${localStorage.getItem('eynick')}`, 'Senha', 'enviarPass()');
-	document.getElementById('buttons').innerHTML += botao('Voltar', "janela.innerHTML = bloMsg(localStorage.getItem('eynick'))");
+	document.getElementById('buttons').innerHTML += botao('Voltar', "rearanjar(), janela.innerHTML = bloMsg(localStorage.getItem('eynick'))");
 }
 
 function enviarPass(){//Sistema que avalia, compara se a senha está correta ou não
 	let senha = document.getElementById('password').value;
 	if(!senha){
-		window.alert('Por favor, digite algo!')
+		criarAviso('Por favor, digite algo!', '150px', '480px');
 	}else if(senha == localStorage.getItem('eypassword')){
-		window.alert('Senha correta!');
+		logar();
 	}else{
-		window.alert('Senha incorreta...');
+		criarAviso('Senha incorreta...', '150px', '480px');
 	}
 }
 
 function logar(){//Logar na conta do usuário
-	janela.innerHTML =  '';//Limpar a tela
+	janela.innerHTML = '';//Limpar a tela
 	setTimeout(()=>{
 		janela.innerHTML = bemVindoa();//Adicionar o elemento bem-vindo já com a animação aparecendo aos poucos
 		setTimeout(()=>{

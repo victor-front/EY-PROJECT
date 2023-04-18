@@ -19,7 +19,7 @@ const criarConta = () => `
 			<label for="light" onclick="setarCor()"><input id="light" type="radio" name="radtem">Light</label><br>
 			<input id="concordo" type="checkbox" name="concordo"><label for="concordo">Concordo com os termos de privacidade(<a href="#" rel="next" target="_blank">Ler os termos</a>)</label>
 		</div>
-		<input type="button" value="Feito" onclick="filtrar()">
+		<button onclick="filtrar()">Feito</button>
 	</section>
 `;
 
@@ -30,16 +30,16 @@ const loadLogo = () => `
 const bloMsg = (nick) => `
 	<section id="bloque">
 		<p>Detectamos um usurário chamado <strong>${nick}</strong>. Que fazes?</p>
-		<input type="button" class="buttonGeneric" value="Prosseguir" onclick="bloque02()">
-		<input type="button" class="buttonGeneric" value="Formatar" onclick="perguntar()">
+		<button class="buttonGeneric" onclick="bloque02()">Prosseguir</button>
+		<button class="buttonGeneric" onclick="perguntar()">Formatar</button>
 	</section>
 `
 
 const pergunta = (message, op1, op2, fu1, fu2) => `
 	<section id="pergunta">
 		<p>${message}</p>
-		<input type="button" class="buttonGeneric" value="${op1}" onclick="${fu1}">
-		<input type="button" class="buttonGeneric" value="${op2}" onclick="${fu2}">
+		<button class="buttonGeneric" onclick="${fu1}">${op1}</button>
+		<button class="buttonGeneric" onclick="${fu2}">${op2}</button>
 	</section>
 `;
 
@@ -50,7 +50,7 @@ const input = (title, place, click) => `
 			<input type="password" class="password" id="password" placeholder="${place}">
 		</div>
 		<div id="buttons">
-			<input type="button" id="enviarPass" class="buttonGeneric" value="Enviar" onclick="${click}">
+			<button id="enviarPass" class="buttonGeneric" onclick="${click}">Enviar</button>
 		<div>
 	</section>
 `
@@ -60,5 +60,27 @@ const bemVindoa = () => `
 `
 
 const botao = (msg, fun) => `
-	<input type="button" id="botao" class="buttonGeneric" value="${msg}" onclick="${fun}">
+	<button id="botao" class="buttonGeneric" onclick="${fun}">${msg}</button>
 `;
+
+const aviso = (msg, top, left) => `
+	<div id="balao" class="balao" style="top: ${top}; left: ${left};">
+		<p>${msg}</p>
+	</div>
+`
+function criarAviso(msg, top, left){//Sistema que cria o balão de aviso
+	if(!cad){//Se cad for false, pode executar essa função;
+		cad = true;
+		janela.innerHTML += aviso(msg, top, left);
+		setTimeout(()=>{
+			rearanjar();
+		}, 5 * 1000);
+	}
+}
+
+function rearanjar(){//Rebobinar o popup
+	if(cad){
+		document.getElementById('balao').remove();
+		cad = false;
+	}
+}

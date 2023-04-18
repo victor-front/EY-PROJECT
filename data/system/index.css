@@ -99,7 +99,7 @@ section#criarConta a{
 	color: #844;
 }
 
-section#criarConta input[type="button"]{
+section#criarConta button{
 	background-color: #eee;
 	border: none;
 	border-radius: 1px;
@@ -165,6 +165,19 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 	padding: 3.8px;
 	outline: 1px solid #eee;
 	border: 1px solid #222;
+	color: #222;
+}
+
+.balao{
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	border-radius: 10px 10px 10px 0px;
+	border: 2px solid #222;
+	background-color: #eee;
+	padding: 5px;
+	font-size: 1em;
+	font-weight: bold;
 	color: #222;
 }
 
