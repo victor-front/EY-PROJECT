@@ -1,5 +1,6 @@
 function signup(){//Sistema de criar conta
 	janela.innerHTML = criarConta();
+	setarCor();//Especificamente: Sincronizar com a input radio atual que já vem definida
 }
 
 function filtrar(){//Filtrar ao criar a conta

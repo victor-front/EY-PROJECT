@@ -13,13 +13,13 @@ const criarConta = () => `
 			<p>Bem, é de se notar que não tens uma conta. Vamor começar?</p>
 		</div>
 		<div id="form">
-			<input id="nick" type="text" placeholder="Nome de usuário" maxlength="10"><br>
-			<input id="password" type="password" placeholder="Senha(opicional)" minlenght="8" maxlength="10"><br>
+			<input id="nick" autocomplete="none" type="text" placeholder="Nome de usuário" class="genericInput" maxlength="10"><br>
+			<input id="password" type="password" placeholder="Senha(opicional)" class="genericInput" minlenght="8" maxlength="10"><br>
 			<label for="dark"><input id="dark" type="radio" name="radtem" checked onclick="setarCor()">Dark</label>
 			<label for="light" onclick="setarCor()"><input id="light" type="radio" name="radtem">Light</label><br>
 			<input id="concordo" type="checkbox" name="concordo"><label for="concordo">Concordo com os termos de privacidade(<a href="#" rel="next" target="_blank">Ler os termos</a>)</label>
 		</div>
-		<button onclick="filtrar()">Feito</button>
+		<button onclick="filtrar()" class="buttonGeneric">Feito</button>
 	</section>
 `;
 
@@ -47,7 +47,7 @@ const input = (title, place, click) => `
 	<section id="pedirSenha">
 		<h1>${title}</h1>
 		<div>
-			<input type="password" class="password" id="password" placeholder="${place}">
+			<input type="password" class="genericInput" id="password" class="genericInput" maxlength="10" placeholder="${place}">
 		</div>
 		<div id="buttons">
 			<button id="enviarPass" class="buttonGeneric" onclick="${click}">Enviar</button>

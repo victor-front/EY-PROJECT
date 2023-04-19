@@ -14,6 +14,18 @@
 	background-color: #ddd;
 }
 
+div#ey-window.light button{
+	background-color: #222;
+	color: #ddd;
+}
+
+div#ey-window.light .genericInput{
+	background-color: #222;
+	color: #ccc;
+	border: 1px solid #ddd;
+	outline: 1px solid #222;
+}
+
 .invertColor{
 	filter: invert(1);
 }
@@ -60,46 +72,41 @@ body{
 	overflow: hidden;
 }
 
-section#criarConta{
+#criarConta{
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
 }
 
-section#criarConta h1{
+#criarConta h1{
 	font-size: 1.8em;
 	margin-bottom: 10px;
 }
 
-section#criarConta p{
+#criarConta p{
 	margin-bottom: 10px;
 }
 
-section#criarConta input[type="text"], section#criarConta input[type="password"]{
+.genericInput{
 	padding: 5px;
 	font-size: .8em;
 	margin-bottom: 10px;
 	border: none;
 	background-color: #eee;
-}
-
-section#criarConta input[type="text"]:focus, section#criarConta input[type="password"]:focus{
-	padding: 3.8px;
 	outline: 1px solid #eee;
 	border: 1px solid #222;
-	color: #222;
 }
 
-section#criarConta input[type="checkbox"]{
+#criarConta input[type="checkbox"]{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-section#criarConta a{
+#criarConta a{
 	color: #844;
 }
 
-section#criarConta button{
+#criarConta button{
 	background-color: #eee;
 	border: none;
 	border-radius: 1px;
@@ -129,6 +136,7 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 	margin-bottom: 10px;
 	font-weight: bold;
 	padding: 5px;
+	cursor: pointer;
 }
 
 .buttonGeneric:hover{
@@ -153,21 +161,6 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 	transform: translate(-50%, -50%);
 }
 
-.password{
-	padding: 5px;
-	font-size: .8em;
-	margin-bottom: 10px;
-	border: none;
-	background-color: #eee;
-}
-
-.password:focus{
-	padding: 3.8px;
-	outline: 1px solid #eee;
-	border: 1px solid #222;
-	color: #222;
-}
-
 .balao{
 	display: flex;
 	position: absolute;
@@ -179,6 +172,7 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 	font-size: 1em;
 	font-weight: bold;
 	color: #222;
+	cursor: pointer;
 }
 
 @keyframes aparecer{
