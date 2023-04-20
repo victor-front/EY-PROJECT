@@ -69,8 +69,8 @@ const aviso = (msg, top, left) => `
 	</div>
 `
 function criarAviso(msg, top, left){//Sistema que cria o balão de aviso
-	if(!cad){//Se cad for false, pode executar essa função;
-		cad = true;
+	if(!cad[1]){//Se cad for false, pode executar essa função;
+		cad[1] = true;
 		janela.innerHTML += aviso(msg, top, left);
 		setTimeout(()=>{
 			rearanjar();
@@ -81,6 +81,6 @@ function criarAviso(msg, top, left){//Sistema que cria o balão de aviso
 function rearanjar(){//Rebobinar o popup
 	if(cad){
 		document.getElementById('balao').remove();
-		cad = false;
+		cad[1] = false;
 	}
 }

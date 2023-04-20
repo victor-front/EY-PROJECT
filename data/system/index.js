@@ -2,14 +2,26 @@ let conta = localStorage.getItem('eynick'); //Define se a conta foi criada ou n�
 let janela = document.getElementById('ey-window'); //Janela recebe o valor do caminho do elemento da tela do EY
 let tema = localStorage.getItem('eytema');
 let underfinedTema = 'dark';
-let cad = false; //Variável que permite se pode gerar o aviso ou não
+let cad = [false, false]; //Vetor que permite se pode gerar o aviso ou não
+
+janela.innerHTML = iniciando('Precione Enter');
+if(!tema){//Se o tema não for definido, vai no tema padrão(dark)
+	janela.classList.add(underfinedTema);
+}else{//Se for definido, vai no específico
+	janela.classList.add(tema);
+}
+
+document.body.addEventListener('keydown', (event)=>{//Eventos de tecla do usuário
+	if(!cad[0]){//Se o cadeado 0 for false, pode executar esses comandos
+		let tecla = event.key;
+		if(tecla == 'Enter'){
+			cad[0] = true;
+			boot();
+		}
+	}
+})
 
 function boot(){//Boot do sistema, o sistema se inicia principalmente por aqui
-	if(!tema){//Se o tema não for definido, vai no tema padrão(dark)
-		janela.classList.add(underfinedTema);
-	}else{//Se for definido, vai no específico
-		janela.classList.add(tema);
-	}
 	janela.innerHTML = iniciando('Iniciando');
 	setTimeout(()=>{//Delay de 5 segundos
 		if(!conta){
@@ -22,6 +34,8 @@ function boot(){//Boot do sistema, o sistema se inicia principalmente por aqui
 
 function start(){//Startar o sistema
 	setTimeout(()=>{
+		const musicStart = new Audio('data/system/start.mp3');
+		musicStart.play();
 		janela.innerHTML = loadLogo();//Desenhar a logo na tela
 		if(localStorage.getItem('eytema') == 'light'){//Se o tema for light, inverter a cor da logo
 			document.getElementById('logo').classList.add('invertColor');
