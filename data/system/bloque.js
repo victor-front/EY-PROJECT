@@ -34,6 +34,7 @@ function logar(){//Logar na conta do usuário
 			document.getElementById('bemVindoa').classList.remove('aparecer');//Removendo a animação de aparecer e adicionando a de desaparecer
 			document.getElementById('bemVindoa').classList.add('desaparecer');
 			setTimeout(()=>{
+				onlog();
 				desktop();//Chamar o desktop
 			}, 5 * 1000)
 		}, 6 * 1000);
