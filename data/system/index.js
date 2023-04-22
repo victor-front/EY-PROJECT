@@ -2,7 +2,7 @@ let conta = localStorage.getItem('eynick'); //Define se a conta foi criada ou n�
 let janela = document.getElementById('ey-window'); //Janela recebe o valor do caminho do elemento da tela do EY
 let tema = localStorage.getItem('eytema');
 let underfinedTema = 'dark';
-let cad = [false, false]; //Vetor que permite se pode gerar o aviso ou não
+let cad = [false, false, true]; //Vetor que permite se pode gerar o aviso ou não
 
 janela.innerHTML = iniciando('Precione Enter');
 if(!tema){//Se o tema não for definido, vai no tema padrão(dark)
