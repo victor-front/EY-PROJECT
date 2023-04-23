@@ -15,8 +15,8 @@ const criarConta = () => `
 		<div id="form">
 			<input id="nick" autocomplete="none" type="text" placeholder="Nome de usuário" class="genericInput" maxlength="10"><br>
 			<input id="password" type="password" placeholder="Senha(opicional)" class="genericInput" minlenght="8" maxlength="10"><br>
-			<label for="dark"><input id="dark" type="radio" name="radtem" checked onclick="setarCor()">Dark</label>
-			<label for="light" onclick="setarCor()"><input id="light" type="radio" name="radtem">Light</label><br>
+			<label for="dark"><input id="dark" type="radio" name="radtem" checked>Dark</label>
+			<label for="light"><input id="light" type="radio" name="radtem">Light</label><br>
 			<input id="concordo" type="checkbox" name="concordo"><label for="concordo">Concordo com os termos de privacidade(<a href="#" rel="next" target="_blank">Ler os termos</a>)</label>
 		</div>
 		<button onclick="filtrar()" class="buttonGeneric">Feito</button>
@@ -79,7 +79,7 @@ function criarAviso(msg, top, left){//Sistema que cria o balão de aviso
 }
 
 function rearanjar(){//Rebobinar o popup
-	if(cad){
+	if(cad[1]){
 		document.getElementById('balao').remove();
 		cad[1] = false;
 	}

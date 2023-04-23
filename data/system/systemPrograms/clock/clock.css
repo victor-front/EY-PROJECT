@@ -1,0 +1,41 @@
+#clock{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 1.8em;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	border: 3px solid #ddd;
+}
+
+#clockBody{
+	padding: 0px 5px 5px 5px;
+}
+
+#clockHeader{
+	background-color: #ddd;
+	height: 30px;
+}
+
+#clockHeader #x{
+	position: absolute;
+	right: 5px;
+	display: inline-block;
+	font-size: 16px;
+	background-color: #222;
+	padding: 4px;
+	width: 30px;
+	align-items: center;
+	text-align: center;
+}
+
+#hour{
+	transform: translate(2px, -10px);
+}
+
+.ci{
+	width: 64px;
+	image-rendering: pixelated;
+	transform: translate(8px, 18px);
+}

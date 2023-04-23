@@ -33,7 +33,7 @@ function setarCor(){
 			janela.classList.add('light');
 			janela.classList.remove('dark');
 			localStorage.setItem('eytema', 'light');
-		}
+		}setarCor();
 	}, 100);
 }
 

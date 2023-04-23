@@ -4,7 +4,7 @@ let tema = localStorage.getItem('eytema');
 let underfinedTema = 'dark';
 let cad = [false, false, true]; //Vetor que permite se pode gerar o aviso ou não
 
-janela.innerHTML = iniciando('Precione Enter');
+janela.innerHTML = iniciando('Pressione Enter');
 if(!tema){//Se o tema não for definido, vai no tema padrão(dark)
 	janela.classList.add(underfinedTema);
 }else{//Se for definido, vai no específico
