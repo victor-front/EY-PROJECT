@@ -33,9 +33,9 @@ function veriIcon(h){//Verifica qual tipo de icon a ser retornado
 		return `<img class="ci" src="data/system/systemPrograms/clock/c03.png" alt="Manhã">`;
 	}else if(h >= 12 && h < 16){//Se for maior ou igual a 12 e menor que 16
 		return `<img class="ci" src="data/system/systemPrograms/clock/c02.png" alt="Dia">`;
-	}else if(h >= 16 && h <= 18){//Se for maior ou igual a 16 e menor ou igual a 18
+	}else if(h >= 16 && h < 18){//Se for maior ou igual a 16 e menor ou igual a 18
 		return `<img class="ci" src="data/system/systemPrograms/clock/c03.png" alt="Tarde">`;
-	}else if(h > 18 && h <= 23){//Se for maior que 18 e menor ou igual a 23
+	}else if(h >= 18 && h <= 23){//Se for maior que 18 e menor ou igual a 23
 		return `<img class="ci" src="data/system/systemPrograms/clock/c04.png" alt="Noite">`;
 	}
 }
