@@ -28,10 +28,33 @@
 	width: 30px;
 	align-items: center;
 	text-align: center;
+	cursor: pointer;
 }
+/*Compatibilidade com o tema light*/
+div#ey-window.light #clock{
+	border: 3px solid #222;
+}
+
+div#ey-window.light #clockHeader{
+	background-color: #222;
+}
+
+div#ey-window.light #clockHeader #x{
+	background-color: #ddd;
+}
+
+div#ey-window.light .ci{
+	filter: invert(90%);
+}
+
+div#ey-window.light #hour{
+	color: #222;
+}
+/*Compatibilidade com o tema light*/
 
 #hour{
 	transform: translate(2px, -10px);
+	color: #ddd;
 }
 
 .ci{
