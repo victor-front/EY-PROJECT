@@ -23,6 +23,8 @@ function stepClock(){
 		setTimeout(()=>{
 			stepClock();//Subir pro escopo do clock
 		}, 100);
+	}else{
+		clock.cor = false;//Deixar variável de cortar loop do clock como false
 	}
 }
 
