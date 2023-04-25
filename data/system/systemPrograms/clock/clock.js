@@ -10,6 +10,7 @@ const clockCom = () => `
 
 function clockStart(){//função que executa as funcionabilidades do programa Clock(relógio)
 	clock.pod = false;//Clock não pode mais ser executado pois já está sendo executado
+	clock.executando = true;//Clock já está sendo executado
 	janela.innerHTML += clockCom();//Desenhar carcaça do relógio na tela
 	stepClock();//Chamar looping de atualização do relógio
 }
@@ -24,6 +25,7 @@ function stepClock(){
 			stepClock();//Subir pro escopo do clock
 		}, 100);
 	}else{
+		clock.executando = false;//Deixar como false a variável de executando
 		clock.cor = false;//Deixar variável de cortar loop do clock como false
 	}
 }

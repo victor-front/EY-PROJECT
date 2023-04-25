@@ -180,6 +180,36 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 	cursor: pointer;
 }
 
+.appIcon{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	margin: 1em;
+	width: 64px;
+	height: 64px;
+	cursor: pointer;
+}
+
+.appIcon img{
+	width: 64px;
+	height: 64px;
+	image-rendering: pixelated;
+}
+
+.appIcon label{
+	font-size: 1em;
+	font-weight: bold;
+	cursor: pointer;
+} 
+
+div#ey-window.light .appIcon label{
+	color: #222;
+}
+
+div#ey-window.light .appIcon img{
+	filter: invert(90%);
+}
+
 @keyframes aparecer{
 	0%{opacity: 0;}
 	100%{opacity: 100%;}

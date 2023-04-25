@@ -63,6 +63,13 @@ const botao = (msg, fun) => `
 	<button id="botao" class="buttonGeneric" onclick="${fun}">${msg}</button>
 `;
 
+const appIcon = (nome, pode, caminho) =>`
+	<div class="appIcon" onclick="${pode}">
+		<img src="${caminho}" alt="${nome}">
+		<label>${nome}</label>
+	</div>
+`
+
 const aviso = (msg, top, left) => `
 	<div id="balao" class="balao" style="top: ${top}; left: ${left};">
 		<p>${msg}</p>
