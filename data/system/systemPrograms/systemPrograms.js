@@ -6,7 +6,15 @@ let clock = {
 	executando: false,//Se o clock já está sendo executado
 }
 
+let pc = {
+	name: 'PC',//Nome da aplicação
+	pod: true,//Se o programa pode ser executado
+	cor: false,//Se pode cortar o step do programa
+	executando: false,//Se o PC já está sendo executado
+}
+
 let desklist = [//Lista de apps que serão exibidos no desktop
+	[pc.name, 'pc.pod = true', 'data/system/systemPrograms/pc/icon.png'],
 	[clock.name, 'clock.pod = true', 'data/system/systemPrograms/clock/icon.png'],
 ]
 

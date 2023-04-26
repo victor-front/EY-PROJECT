@@ -1,7 +1,7 @@
 //Carcaça do relógio
 const clockCom = () => `
 	<div id="clock">
-		<div id="clockHeader"><img class="x" src="data/system/systemPrograms/x.png" alt="Close" onclick="encerrarClock()"></div>
+		<div id="clockHeader"><img src="data/system/systemPrograms/x.png" onclick="encerrarPc()"></div>
 		<div id="clockBody">
 			<p id="hour">00:00</p>
 		</div>

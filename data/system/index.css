@@ -181,7 +181,7 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 }
 
 .appIcon{
-	position: absolute;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin: 1em;
@@ -200,6 +200,7 @@ section#bloque p, section#pergunta p, section#pedirSenha p{
 	font-size: 1em;
 	font-weight: bold;
 	cursor: pointer;
+	text-align: center;
 } 
 
 div#ey-window.light .appIcon label{
@@ -208,6 +209,26 @@ div#ey-window.light .appIcon label{
 
 div#ey-window.light .appIcon img{
 	filter: invert(90%);
+}
+
+.x{
+	position: absolute;
+	right: 5px;
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+}
+
+.x{
+	width: 28px;
+	height: 28px;
+	image-rendering: pixelated;
+	transform: translate: (-12px, 0px);
+}
+
+div#ey-window.light .x{
+	filter: invert(100%);
 }
 
 @keyframes aparecer{

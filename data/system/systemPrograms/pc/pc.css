@@ -18,6 +18,18 @@
 	height: 30px;
 }
 
+#clockHeader #x{
+	position: absolute;
+	right: 5px;
+	display: inline-block;
+	font-size: 16px;
+	background-color: #222;
+	padding: 4px;
+	width: 30px;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+}
 /*Compatibilidade com o tema light*/
 div#ey-window.light #clock{
 	border: 3px solid #222;
@@ -25,6 +37,10 @@ div#ey-window.light #clock{
 
 div#ey-window.light #clockHeader{
 	background-color: #222;
+}
+
+div#ey-window.light #clockHeader #x{
+	background-color: #ddd;
 }
 
 div#ey-window.light .ci{
