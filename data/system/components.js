@@ -29,7 +29,7 @@ const loadLogo = () => `
 
 const bloMsg = (nick) => `
 	<section id="bloque">
-		<p>Detectamos um usurário chamado <strong>${nick}</strong>. Que fazes?</p>
+		<p>Detectamos um usuário chamado <strong>${nick}</strong>. Que fazes?</p>
 		<button class="buttonGeneric" onclick="bloque02()">Prosseguir</button>
 		<button class="buttonGeneric" onclick="perguntar()">Formatar</button>
 	</section>
