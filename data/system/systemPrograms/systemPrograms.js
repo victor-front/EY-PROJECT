@@ -8,9 +8,11 @@ let clock = {
 
 let pc = {
 	name: 'PC',//Nome da aplicação
-	pod: true,//Se o programa pode ser executado
+	pod: false,//Se o programa pode ser executado
 	cor: false,//Se pode cortar o step do programa
 	executando: false,//Se o PC já está sendo executado
+	oplistname: ['Informações do Sistema', 'Configurações', 'Voltar'],
+	oplistfun: ['pcInfo()', 'pcConfig()', 'encerrarPC();'],
 }
 
 let desklist = [//Lista de apps que serão exibidos no desktop
@@ -26,6 +28,13 @@ if(cad[2]){
 					clockStart();
 				}else{
 					clock.pod = false;
+				}
+			}
+			if(pc.pod){//Se pod for true(se PC pode ser executado)
+				if(!pc.executando){
+					pcStart();
+				}else{
+					pc.pod = false;
 				}
 			}
 			step();//Voltar ao escopo do loop
