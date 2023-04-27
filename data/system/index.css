@@ -4,17 +4,12 @@
 	box-sizing: border-box;
 }
 
-@font-face{
-	font-family: "Pixeled";
-	src: url("pixeled.ttf");
-}
-
 body, html{
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	font-family: "Pixeled", Arial, Helvetica, Verdana, sans-serif;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
 body{
