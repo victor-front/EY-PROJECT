@@ -24,7 +24,7 @@ const criarConta = () => `
 `;
 
 const loadLogo = () => `
-	<img id="logo" class="aparecer" src="data/system/logo.png"/>
+	<img id="logoinicio" class="aparecer" src="data/system/logo.png"/>
 `;
 
 const bloMsg = (nick) => `

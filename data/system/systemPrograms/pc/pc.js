@@ -6,6 +6,24 @@ const pcCom = () => `
 	</div>
 `;
 
+const pcInfoCom = () => `
+	<div id="pcInfo">
+		<h1>Informações do Sistema</h1>
+		<div id="edicao">
+			<h2>Edição do EyeOS</h2>
+			<p>EyeOS 1.0</p>
+			<p>Copyright <strong>Victor Front</strong> 2023.</p>
+		</div>
+		<div id="general">
+			<h2>Informações gerais do Sistema</h2>
+			<p>Versão específica: EyeOS 1.0 alpha edition</p>
+			<p>Tipo de sistema: Simulador de sistema operacional.</p>
+			<p>Nome de usuário: <strong>${localStorage.getItem('eynick')}</strong></p>
+		</div>
+	</div>
+	<img id="logoinfo" src="data/system/logo.png" alt="logo">
+`
+
 function pcStart(){//função que executa as funcionabilidades do programa PC
 	if(clock.executando){
 		document.querySelector("#clock").style.display = 'none';
@@ -20,7 +38,7 @@ function pcStart(){//função que executa as funcionabilidades do programa PC
 }
 
 function pcInfo(){
-	window.alert('pcInfo');
+	document.querySelector("#pc").innerHTML = pcInfoCom();
 }
 
 function pcConfig(){

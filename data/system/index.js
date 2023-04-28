@@ -38,11 +38,11 @@ function start(){//Startar o sistema
 		musicStart.play();
 		janela.innerHTML = loadLogo();//Desenhar a logo na tela
 		if(localStorage.getItem('eytema') == 'light'){//Se o tema for light, inverter a cor da logo
-			document.getElementById('logo').classList.add('invertColor');
+			document.querySelector("#logoinicio").classList.add('invertColor');
 		}
 		setTimeout(()=>{//Adicionar anmação de desaparecer
-			document.getElementById('logo').classList.remove('aparecer');
-			document.getElementById('logo').classList.add('desaparecer');
+			document.querySelector("#logoinicio").classList.remove('aparecer');
+			document.querySelector("#logoinicio").classList.add('desaparecer');
 			setTimeout(()=>{//Remover a logo
 				bloque01();
 			}, 4 * 1000);

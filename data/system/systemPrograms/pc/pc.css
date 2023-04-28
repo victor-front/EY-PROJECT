@@ -20,6 +20,34 @@
 	width: 500px;
 }
 
+#pcInfo p, h1, h2{
+	margin-bottom: 5px;
+}
+
+#pc #logoinfo{
+	position: absolute;
+	top: 120px;
+	left: 80%;
+	width: 200px;
+	image-rendering: pixelated;
+}
+
+#pcInfo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	font-size: 16px;
+}
+
+#pcInfo h2{
+	font-size: 18px;
+}
+
+#pcIndo h1{
+	font-size: 20px;
+}
+
 /*Compatibilidade com o tema light*/
 div#ey-window.light #pc{
 	background-color: #ddd;
