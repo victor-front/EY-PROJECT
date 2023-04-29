@@ -48,12 +48,23 @@
 	font-size: 20px;
 }
 
+#voltarPC{
+	position: absolute;
+	bottom: -210px;
+	left: 10px;
+	margin: 10px;
+}
+
 /*Compatibilidade com o tema light*/
 div#ey-window.light #pc{
 	background-color: #ddd;
 }
 
 div#ey-window.light .ci{
+	filter: invert(90%);
+}
+
+div#ey-window.light #logoinfo{
 	filter: invert(90%);
 }
 /*Compatibilidade com o tema light*/

@@ -20,6 +20,7 @@ const pcInfoCom = () => `
 			<p>Tipo de sistema: Simulador de sistema operacional.</p>
 			<p>Nome de usuário: <strong>${localStorage.getItem('eynick')}</strong></p>
 		</div>
+		<button id="voltarPC" class="buttonGeneric" onclick="voltar()">Voltar</button>
 	</div>
 	<img id="logoinfo" src="data/system/logo.png" alt="logo">
 `
@@ -37,11 +38,20 @@ function pcStart(){//função que executa as funcionabilidades do programa PC
 	stepPC();//Chamar looping de verificação do PC
 }
 
-function pcInfo(){
+function voltar(){//Voltar ao menu pc
+	document.querySelector("#pc").remove();
+	pcStart();
+}
+
+function pcInfo(){//Desenhar as informações do pc
 	document.querySelector("#pc").innerHTML = pcInfoCom();
 }
 
-function pcConfig(){
+function desligar(){//Desligar pc
+	window.alert('Desligar');
+}
+
+function pcConfig(){//Abrir menu de configurações do pc
 	window.alert('pcConfig');
 }
 

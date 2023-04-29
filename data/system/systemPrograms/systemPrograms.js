@@ -11,8 +11,8 @@ let pc = {
 	pod: false,//Se o programa pode ser executado
 	cor: false,//Se pode cortar o step do programa
 	executando: false,//Se o PC já está sendo executado
-	oplistname: ['Informações do Sistema', 'Configurações', 'Voltar'],
-	oplistfun: ['pcInfo()', 'pcConfig()', 'encerrarPC();'],
+	oplistname: ['Informações do Sistema', 'Configurações', 'Desligar Sistema', 'Voltar'],
+	oplistfun: ['pcInfo()', 'pcConfig()', 'desligar();', 'encerrarPC();'],
 }
 
 let desklist = [//Lista de apps que serão exibidos no desktop
