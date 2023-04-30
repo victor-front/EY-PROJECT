@@ -28,6 +28,7 @@ function enviarPass(){//Sistema que avalia, compara se a senha está correta ou 
 
 function logar(){//Logar na conta do usuário
 	janela.innerHTML = '';//Limpar a tela
+	cad[1] = false;
 	setTimeout(()=>{
 		janela.innerHTML = bemVindoa();//Adicionar o elemento bem-vindo já com a animação aparecendo aos poucos
 		setTimeout(()=>{

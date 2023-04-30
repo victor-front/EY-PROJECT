@@ -48,7 +48,20 @@ function pcInfo(){//Desenhar as informações do pc
 }
 
 function desligar(){//Desligar pc
-	window.alert('Desligar');
+	janela.innerHTML = iniciando('Desligando');//Imprimir mensagem de desligando
+	if(clock.executando){//Se o relógio está sendo executado, fechá-lo
+		clock.cor = true;
+	}
+	setTimeout(()=>{//Delay de 5 segundos
+		if(localStorage.getItem('eytema') == 'dark')
+			janela.innerHTML = flash();//Desenhar flash na tela
+		else{
+			janela.innerHTML = flashf();//Desenhar flash na tela
+		}
+		setTimeout(()=>{//Delay de 3 segundos e reiniciar a página
+			location.reload();
+		}, 3 * 1000);
+	}, 5 * 1000);
 }
 
 function pcConfig(){//Abrir menu de configurações do pc

@@ -70,6 +70,14 @@ const appIcon = (nome, pode, caminho) =>`
 	</div>
 `
 
+const flash = () => `
+	<div class="flash"><div/>
+`
+
+const flashf = () => `
+	<div class="flashf"><div/>
+`
+
 const aviso = (msg, top, left) => `
 	<div id="balao" class="balao" style="top: ${top}; left: ${left};">
 		<p>${msg}</p>
