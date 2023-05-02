@@ -36,7 +36,7 @@ const bloMsg = (nick) => `
 `
 
 const pergunta = (message, op1, op2, fu1, fu2) => `
-	<section id="pergunta">
+	<section class="pergunta">
 		<p>${message}</p>
 		<button class="buttonGeneric" onclick="${fu1}">${op1}</button>
 		<button class="buttonGeneric" onclick="${fu2}">${op2}</button>

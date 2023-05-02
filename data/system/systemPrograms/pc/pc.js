@@ -6,6 +6,14 @@ const pcCom = () => `
 	</div>
 `;
 
+const pcConfigCom = () => `
+	<div id="pcConfig">
+		<button class="buttonGeneric" onclick="editarUs()">Usuário</button>
+		<button class="buttonGeneric" onclick="formatarSis()">Formatar</button>
+		<button class="buttonGeneric" onclick="voltar()">Voltar</button>
+	</div>
+`
+
 const pcInfoCom = () => `
 	<div id="pcInfo">
 		<h1>Informações do Sistema</h1>
@@ -26,14 +34,25 @@ const pcInfoCom = () => `
 `
 
 function pcStart(){//função que executa as funcionabilidades do programa PC
-	if(clock.executando){
+	if(document.querySelector(".pergunta")){//Se a pergunta se quer formatar já existir, remove-la
+		document.querySelector(".pergunta").remove();
+	}
+	if(document.querySelector("#pcConfig")){//Se pcConfig existir, executar o bloco
+		if(document.querySelector("#pcConfig").style.display == 'none'){//Se pcConfig estiver escondido, dar display dele na tela
+			document.querySelector("#pcConfig").style.display = 'flex';
+		}
+	}
+	if(clock.executando){//Se clock estiver sendo executado, esconde-lo
 		document.querySelector("#clock").style.display = 'none';
 	}
 	pc.pod = false;//PC não pode mais ser executado pois já está sendo executado
 	pc.executando = true;//PC já está sendo executado
-	janela.innerHTML += pcCom();//Desenhar carcaça do PC na tela
-	for(c=0;c < pc.oplistname.length;c++){
-		document.querySelector("#pcbody").innerHTML += botao(`${pc.oplistname[c]}`, `${pc.oplistfun[c]}`);
+	if(!document.querySelector("#pc")){//Se PC não estiver desenhado, executar comandos abaixo
+		janela.innerHTML += pcCom();//Desenhar carcaça do PC na tela
+		
+		for(c=0;c < pc.oplistname.length;c++){
+			document.querySelector("#pcbody").innerHTML += botao(`${pc.oplistname[c]}`, `${pc.oplistfun[c]}`);
+		}
 	}
 	stepPC();//Chamar looping de verificação do PC
 }
@@ -65,7 +84,11 @@ function desligar(){//Desligar pc
 }
 
 function pcConfig(){//Abrir menu de configurações do pc
-	window.alert('pcConfig');
+	document.querySelector("#pc").innerHTML = pcConfigCom();
+}
+
+function editarUs(){//Abrir tela para editar o usuário
+	window.alert('Editar');
 }
 
 function stepPC(){
@@ -83,4 +106,13 @@ function encerrarPC(){//Cortar o step
 	}
 	document.querySelector("#pc").remove();
 	pc.cor = true;//Variável que permite cortar o step
+}
+
+function formatarSis(){//Formatar Sistema
+	document.querySelector("#pcConfig").style.display = 'none';//Escondar o menu de config do PC
+	janela.innerHTML += pergunta('Tem certeza? Todos os seus dados serão resetados.', 
+	'Sim', 
+	'Não', 
+	'formatar();', 
+	'pcStart();');
 }

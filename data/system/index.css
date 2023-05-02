@@ -154,7 +154,7 @@ div#ey-window.light .genericInput{
 	padding: 5px;
 }
 
-section#bloque, section#pergunta, section#pedirSenha{
+section#bloque, .pergunta, section#pedirSenha{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -163,7 +163,7 @@ section#bloque, section#pergunta, section#pedirSenha{
 	flex-direction: column;
 }
 
-section#bloque p, section#pergunta p, section#pedirSenha p{
+section#bloque p, .pergunta p, section#pedirSenha p{
 	margin-bottom: 10px;
 	font-size: 1.2em;
 }

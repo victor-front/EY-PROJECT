@@ -48,6 +48,16 @@
 	font-size: 20px;
 }
 
+#pcConfig{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
 #voltarPC{
 	position: absolute;
 	bottom: -210px;
