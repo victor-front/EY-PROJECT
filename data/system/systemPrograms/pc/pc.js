@@ -14,6 +14,16 @@ const pcConfigCom = () => `
 	</div>
 `
 
+const editarUsCom = () => `
+	<div id="editarUs">
+		<div id="editarbody">
+			<span class="opEd" onclick="editarNick();">Nick</span>
+			<span class="opEd" onclick="editarSenha();">Senha</span>
+			<span class="opEd" onclick="editarTema();">Tema</span>
+		</div>
+	</div>
+`
+
 const pcInfoCom = () => `
 	<div id="pcInfo">
 		<h1>Informações do Sistema</h1>
@@ -88,7 +98,19 @@ function pcConfig(){//Abrir menu de configurações do pc
 }
 
 function editarUs(){//Abrir tela para editar o usuário
-	window.alert('Editar');
+	janela.innerHTML += editarUsCom();
+}
+
+function editarNick(){
+	//nada
+}
+
+function editarSenha(){
+	//nada
+}
+
+function editarTema(){
+	//nada
 }
 
 function stepPC(){
