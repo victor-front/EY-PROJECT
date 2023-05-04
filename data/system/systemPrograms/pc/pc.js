@@ -17,9 +17,10 @@ const pcConfigCom = () => `
 const editarUsCom = () => `
 	<div id="editarUs">
 		<div id="editarbody">
-			<span class="opEd" onclick="editarNick();">Nick</span>
-			<span class="opEd" onclick="editarSenha();">Senha</span>
-			<span class="opEd" onclick="editarTema();">Tema</span>
+			<button class="opEd" onclick="editarNick();">Nick</button>
+			<button class="opEd" onclick="editarSenha();">Senha</button>
+			<button class="opEd" onclick="editarTema();">Tema</button>
+			<button class="opEd" onclick="document.querySelector('#editarUs').remove();">Voltar</button>
 		</div>
 	</div>
 `
@@ -41,6 +42,17 @@ const pcInfoCom = () => `
 		<button id="voltarPC" class="buttonGeneric" onclick="voltar()">Voltar</button>
 	</div>
 	<img id="logoinfo" src="data/system/logo.png" alt="logo">
+`
+
+const mudarNickCom = () => `
+	<div id="mudarNick">
+		<div id="nickContainer">
+			<input class="genericInput" id="novoNick" type="text" placeholder="Novo nick" maxlength="10" autocomplete="none">
+			<div id="botoBody">
+				<button id="nickFeito" class="buttonGeneric" onclick="filtroNick(1);">Feito</button><button id="nickVoltar" class="buttonGeneric" onclick="filtroNick(2);">Voltar</button>
+			</div>
+		</div>
+	</div>
 `
 
 function pcStart(){//função que executa as funcionabilidades do programa PC
@@ -101,8 +113,24 @@ function editarUs(){//Abrir tela para editar o usuário
 	janela.innerHTML += editarUsCom();
 }
 
-function editarNick(){
-	//nada
+function editarNick(){//Função que exibe o elemento para editar o nick do usuário
+	document.querySelector("#editarUs").remove();
+	janela.innerHTML += mudarNickCom();
+}
+
+function filtroNick(n){//Filtro para evitar duas funções separadas
+		if(n == 1){
+			if(document.querySelector("#novoNick").value){
+				localStorage.setItem('eynick', `${document.querySelector("#novoNick").value}`);
+				document.querySelector("#mudarNick").remove();
+				editarUs();
+			}else{
+				criarAviso('Por favor, digite um Nick!', '150px', '490px');
+			}
+		}else{
+			document.querySelector("#mudarNick").remove();
+			editarUs();
+		}
 }
 
 function editarSenha(){
