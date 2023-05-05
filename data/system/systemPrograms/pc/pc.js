@@ -55,6 +55,17 @@ const mudarNickCom = () => `
 	</div>
 `
 
+const mudarSenhaCom = () => `
+	<div id="mudarSenha">
+		<div id="senhaContainer">
+			<input class="genericInput" id="novaSenha" type="password" placeholder="Nova senha" maxlength="10" autocomplete="none">
+			<div id="passBody">
+				<button id="senhaFeita" class="buttonGeneric" onclick="filtroSenha(1);">Feito</button><button id="removerSenha" class="buttonGeneric" onclick="filtroSenha(2)">Remover</button><button id="senhaVoltar" class="buttonGeneric" onclick="filtroSenha(3);">Voltar</button>
+			</div>
+		</div>
+	</div>
+`
+
 function pcStart(){//função que executa as funcionabilidades do programa PC
 	if(document.querySelector(".pergunta")){//Se a pergunta se quer formatar já existir, remove-la
 		document.querySelector(".pergunta").remove();
@@ -133,8 +144,36 @@ function filtroNick(n){//Filtro para evitar duas funções separadas
 		}
 }
 
-function editarSenha(){
-	//nada
+function filtroSenha(n){//Filtro para evitar duas funções separadas
+	if(n == 1){
+		let senha = document.querySelector("#novaSenha").value;
+		if(senha){//Se o usuário digitou a senha e se a mesma é maior do que 8 caracteres
+			if(senha.length < 8){
+				criarAviso('A senha precisa ter pelo menos 8 caracteres!', '150px', '480px');
+			}else{
+				localStorage.setItem('eypassword', `${document.querySelector("#novaSenha").value}`);
+				document.querySelector("#mudarSenha").remove();
+				editarUs();
+			}
+		}else{
+			criarAviso('Por favor, digite, uma senha!', '150px', '490px');
+		}
+	}else if(n == 2){
+		if(localStorage.getItem('eypassword') !== null){
+			localStorage.removeItem('eypassword');
+			document.querySelector("#mudarSenha").remove();
+		}else{
+			criarAviso('Não há nada para remover, não tens uma senha ainda.', '150px', '480px;');
+		}
+	}else{
+		document.querySelector("#mudarSenha").remove();
+		editarUs();
+	}
+}
+
+function editarSenha(){//Função que exibe a etapa para poder modificar ou remover a senha
+	document.querySelector("#editarUs").remove();
+	janela.innerHTML += mudarSenhaCom();
 }
 
 function editarTema(){

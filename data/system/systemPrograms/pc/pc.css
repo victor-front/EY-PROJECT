@@ -104,7 +104,7 @@
 	opacity: 80%;
 }
 
-#mudarNick{
+#mudarNick, #mudarSenha{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -116,15 +116,16 @@
 	color: #ddd;
 }
 
-#nickContainer{
+#nickContainer, #senhaContainer{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	max-width: 500px;
+	width: 100%;
+	max-width: 200px;
 }
 
-#botoBody{
+#botoBody, #passBody{
 	display: flex;
 	flex-direction: row;
 }
@@ -134,9 +135,28 @@
 	margin: 1px;
 }
 
-#botoBody #nickVoltar{
-	width: 30%;
+#passBody #senhaFeita{
+	width: 33%;
 	margin: 1px;
+}
+
+#botoBody #nickVoltar{
+	width: 40%;
+	margin: 1px;
+}
+
+#passBody #senhaVoltar{
+	width: 33%;
+	margin: 1px;
+}
+
+#passBody #removerSenha{
+	width: 33%;
+	margin: 1px;
+}
+
+#novaSenha, #novoNick{
+	width: 100%;
 }
 
 /*Compatibilidade com o tema light*/
@@ -152,7 +172,7 @@ div#ey-window.light #logoinfo{
 	filter: invert(90%);
 }
 
-div#ey-window.light #mudarNick, div#ey-window.light #editarUs{
+div#ey-window.light #mudarNick, div#ey-window.light #mudarSenha, div#ey-window.light #editarUs{
 	background-color: #ddd;
 }
 

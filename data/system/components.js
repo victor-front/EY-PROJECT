@@ -83,6 +83,7 @@ const aviso = (msg, top, left) => `
 		<p>${msg}</p>
 	</div>
 `
+
 function criarAviso(msg, top, left){//Sistema que cria o balão de aviso
 	if(!cad[1]){//Se cad for false, pode executar essa função;
 		cad[1] = true;
