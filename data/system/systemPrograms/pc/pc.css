@@ -159,6 +159,48 @@
 	width: 100%;
 }
 
+#editarTema{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	left: 100%;
+	color: #ddd;
+	background-color: #111;
+}
+
+#editarTema #editarTemaBody{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 500px;
+	align-items: center;
+}
+
+#editarTema #butEdRow{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#editarTema #butEdRow button{
+	display: block;
+	width: 30%;
+	margin: 1px;
+}
+
+#editarTema button{
+	display: block;
+	width: 40%;
+	margin: 1px;
+	text-align: center;
+}
+
 /*Compatibilidade com o tema light*/
 div#ey-window.light #pc{
 	background-color: #ddd;
@@ -179,6 +221,10 @@ div#ey-window.light #mudarNick, div#ey-window.light #mudarSenha, div#ey-window.l
 div#ey-window.light .opEd{
 	background-color: #222;
 	color: #ddd;
+}
+
+div#ey-window.light #editarTema{
+	background-color: #ddd;
 }
 /*Compatibilidade com o tema light*/
 

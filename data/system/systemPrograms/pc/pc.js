@@ -19,7 +19,7 @@ const editarUsCom = () => `
 		<div id="editarbody">
 			<button class="opEd" onclick="editarNick();">Nick</button>
 			<button class="opEd" onclick="editarSenha();">Senha</button>
-			<button class="opEd" onclick="editarTema();">Tema</button>
+			<button class="opEd" onclick="mudarTema();">Tema</button>
 			<button class="opEd" onclick="document.querySelector('#editarUs').remove();">Voltar</button>
 		</div>
 	</div>
@@ -62,6 +62,17 @@ const mudarSenhaCom = () => `
 			<div id="passBody">
 				<button id="senhaFeita" class="buttonGeneric" onclick="filtroSenha(1);">Feito</button><button id="removerSenha" class="buttonGeneric" onclick="filtroSenha(2)">Remover</button><button id="senhaVoltar" class="buttonGeneric" onclick="filtroSenha(3);">Voltar</button>
 			</div>
+		</div>
+	</div>
+`
+
+const mudarTemaCom = () => `
+	<div id="editarTema">
+		<div id="editarTemaBody">
+			<div id="butEdRow">
+				<button class="buttonGeneric" onclick="filtrarTema(1, 1);">Dark</button><button class="buttonGeneric" onclick="filtrarTema(1, 2);">Light</button>
+			</div>
+			<button class="buttonGeneric" onclick="filtrarTema(2);">Voltar</button>
 		</div>
 	</div>
 `
@@ -130,18 +141,18 @@ function editarNick(){//Função que exibe o elemento para editar o nick do usu�
 }
 
 function filtroNick(n){//Filtro para evitar duas funções separadas
-		if(n == 1){
-			if(document.querySelector("#novoNick").value){
-				localStorage.setItem('eynick', `${document.querySelector("#novoNick").value}`);
-				document.querySelector("#mudarNick").remove();
-				editarUs();
-			}else{
-				criarAviso('Por favor, digite um Nick!', '150px', '490px');
-			}
-		}else{
+	if(n == 1){
+		if(document.querySelector("#novoNick").value){
+			localStorage.setItem('eynick', `${document.querySelector("#novoNick").value}`);
 			document.querySelector("#mudarNick").remove();
 			editarUs();
+		}else{
+			criarAviso('Por favor, digite um Nick!', '150px', '490px');
 		}
+	}else{
+		document.querySelector("#mudarNick").remove();
+		editarUs();
+	}
 }
 
 function filtroSenha(n){//Filtro para evitar duas funções separadas
@@ -176,8 +187,33 @@ function editarSenha(){//Função que exibe a etapa para poder modificar ou remo
 	janela.innerHTML += mudarSenhaCom();
 }
 
-function editarTema(){
-	//nada
+function mudarTema(){
+	document.querySelector("#editarUs").remove();
+	document.querySelector("#pcConfig").remove();
+	document.querySelector("#pc").innerHTML += mudarTemaCom();
+}
+
+function filtrarTema(a, b = null){
+	if(a == 1){
+		if(b == 1){
+			if(localStorage.getItem('eytema') == 'light'){
+				document.querySelector('#ey-window').classList.remove('light');
+			}
+			localStorage.setItem('eytema', 'dark');
+			document.querySelector('#ey-window').classList.add('dark');
+		}else if(b == 2){
+			if(localStorage.getItem('eytema') == 'dark'){
+				document.querySelector('#ey-window').classList.remove('dark');
+			}
+			localStorage.setItem('eytema', 'light');
+			document.querySelector('#ey-window').classList.add('light');
+		}
+		filtrarTema(2);
+	}else if(a == 2){
+		document.querySelector("#editarTema").remove();
+		document.querySelector("#pc").innerHTML += pcConfigCom();
+		editarUs();
+	}
 }
 
 function stepPC(){
