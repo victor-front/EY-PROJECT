@@ -17,7 +17,6 @@ const criarConta = () => `
 			<input id="password" type="password" placeholder="Senha(opicional)" class="genericInput" minlenght="8" maxlength="10"><br>
 			<label for="dark"><input id="dark" type="radio" name="radtem" checked>Dark</label>
 			<label for="light"><input id="light" type="radio" name="radtem">Light</label><br>
-			<input id="concordo" type="checkbox" name="concordo"><label for="concordo">Concordo com os termos de privacidade(<a href="#" rel="next" target="_blank">Ler os termos</a>)</label>
 		</div>
 		<button onclick="filtrar()" class="buttonGeneric">Feito</button>
 	</section>

@@ -31,6 +31,10 @@ body{
 	padding: 10px;
 }
 
+#form{
+	margin-bottom: 5px;
+}
+
 div#ey-window.light button{
 	background-color: #222;
 	color: #ddd;

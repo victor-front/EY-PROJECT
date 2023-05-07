@@ -173,6 +173,7 @@ function filtroSenha(n){//Filtro para evitar duas funções separadas
 		if(localStorage.getItem('eypassword') !== null){
 			localStorage.removeItem('eypassword');
 			document.querySelector("#mudarSenha").remove();
+			editarUs();
 		}else{
 			criarAviso('Não há nada para remover, não tens uma senha ainda.', '150px', '480px;');
 		}
