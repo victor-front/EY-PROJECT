@@ -9,12 +9,14 @@
 <p>O low level do sistema se concentra principalmente no <strong>index.js</strong>. Os programas padrões se encontram na pasta systemPrograms e algumas informações pontuais para poderem executar se encontra em um arquivo JS com o mesmo nome da pasta: <strong>systemPrograms.js</strong>.</p>
 <h2>Créditos</h2>
 
-<ul><h1>Pessoas</h1>
+<ul>
+	Pessoas
 	<ul>
 		<li><a href="https://victor-front.github.io/portfolio-victor/">Victor Front</a> (programação e sprites)</li>
 		<li><a href="https://www.youtube.com/channel/UCW5X7Ltw_1-i8SUAaPW8xKg" rel="external" target="_blank">ItsTam4ra</a> (suporte sonoro)</li>
 	</ul>
-	<ul><h1>Programas/Sites</h1>
+	Programas/Sites
+	<ul>
 		<li>Notepad++</li>
 		<li>Aseprite</li>
 		<li>Paint Dot Net</li>
