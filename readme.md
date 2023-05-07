@@ -1,4 +1,4 @@
-<h1>EyeOS 1.0</h2>
+<h1 style="color: red;">EyeOS 1.0</h2>
 <h2>Introdução</h2>
 <p>Olá, amigos e amigas! Este é apenas um projeto pequeno com o intúito de treinar programação, mas ainda feito com carinho.</p>
 <p>Aceito críticas e sugestões a respeito do código ou do projeto como um todo.</p>
