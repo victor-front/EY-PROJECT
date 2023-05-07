@@ -10,16 +10,18 @@
 <h2>Créditos</h2>
 
 <ul>
-	Pessoas
-	<ul>
-		<li><a href="https://victor-front.github.io/portfolio-victor/">Victor Front</a> (programação e sprites)</li>
-		<li><a href="https://www.youtube.com/channel/UCW5X7Ltw_1-i8SUAaPW8xKg" rel="external" target="_blank">ItsTam4ra</a> (suporte sonoro)</li>
-	</ul>
-	Programas/Sites
-	<ul>
-		<li>Notepad++</li>
-		<li>Aseprite</li>
-		<li>Paint Dot Net</li>
-		<li>Git & GitHub</li>
-	</ul>
+	<li>Pessoas
+		<ul>
+			<li><a href="https://victor-front.github.io/portfolio-victor/">Victor Front</a> (programação e sprites)</li>
+			<li><a href="https://www.youtube.com/channel/UCW5X7Ltw_1-i8SUAaPW8xKg" rel="external" target="_blank">ItsTam4ra</a> (suporte sonoro)</li>
+		</ul>
+	</li>
+	<li>Programas/Sites
+		<ul>
+			<li>Notepad++</li>
+			<li>Aseprite</li>
+			<li>Paint Dot Net</li>
+			<li>Git & GitHub</li>
+		</ul>
+	</li>
 </ul>
