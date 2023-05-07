@@ -25,4 +25,3 @@
 		</ul>
 	</li>
 </ul>
-<img src="https://github.com/victor-front/EY-PROJECT/blob/master/data/system/logo.png" width="100px" alt="EyeOS 1.0 logo">
