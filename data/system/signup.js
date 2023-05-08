@@ -17,7 +17,7 @@ function filtrar(){//Filtrar ao criar a conta
 			criar(nick, pass);
 		}
 	}else{//Se não...
-		criar(nick);
+		criar(nick, 'false');
 	}
 }
 

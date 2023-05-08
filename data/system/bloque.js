@@ -3,7 +3,7 @@ function bloque01(){//Desenhar na tela o usuário detectado
 }
 
 function bloque02(){
-	if(localStorage.getItem('eypassword') !== null){//Se o usuário tiver senha, pedir a senha antes de iniciar
+	if(localStorage.getItem('eypassword') !== 'false'){//Se o usuário tiver senha, pedir a senha antes de iniciar
 		pedirSenha();
 	}else{//Se não, logar direto
 		logar();//Chamar a função de logar
@@ -55,7 +55,7 @@ function formatar(){//Função que formata os dados do usuário
 		}
 		setTimeout(()=>{//Delay de 3 segundos e reiniciar a página
 			localStorage.removeItem('eynick');
-			localStorage.removeItem('eypassword');
+			localStorage.setItem('eypassword', 'false');
 			localStorage.removeItem('eytema');
 			location.reload();
 		}, 3 * 1000);

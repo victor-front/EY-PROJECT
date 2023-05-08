@@ -170,8 +170,8 @@ function filtroSenha(n){//Filtro para evitar duas funções separadas
 			criarAviso('Por favor, digite, uma senha!', '150px', '490px');
 		}
 	}else if(n == 2){
-		if(localStorage.getItem('eypassword') !== null){
-			localStorage.removeItem('eypassword');
+		if(localStorage.getItem('eypassword') !== 'false'){
+			localStorage.setItem('eypassword', 'false');
 			document.querySelector("#mudarSenha").remove();
 			editarUs();
 		}else{
