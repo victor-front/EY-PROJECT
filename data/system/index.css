@@ -16,6 +16,19 @@ body{
 	background-color: #444;
 }
 
+#ey-window{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 800px;
+	height: 100%;
+	max-height: 450px;
+	margin: 6em auto;
+	overflow: hidden;
+}
+
+/*Temas*/
 .dark{
 	color: #ddd;
 	background-color: #111;
@@ -24,6 +37,27 @@ body{
 .light{
 	color: #222;
 	background-color: #ddd;
+}
+/*Temas*/
+
+.footer{
+	position: absolute;
+	background-color: #333;
+	color: #ddd;
+	text-align: center;
+	padding: 5px;
+	bottom: 0;
+	width: 100vw;
+}
+
+.footer a{
+	color: #ddd;
+	text-decoration: none;
+}
+
+.footer a:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 #pressMsg{
@@ -101,18 +135,6 @@ div#ey-window.light .genericInput{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100px;
-}
-
-#ey-window{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	max-width: 800px;
-	height: 100%;
-	max-height: 450px;
-	margin: 4em auto;
-	overflow: hidden;
 }
 
 #criarConta{
